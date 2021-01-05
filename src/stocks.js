@@ -266,8 +266,7 @@ Stocks.prototype.MESSAGES = {
 };
 
 /** Export */
-if (typeof window === 'undefined') {
-  module.exports = Stocks; // Node.js
-} else {
+module.exports = Stocks;
+if (typeof window !== 'undefined') {
   window['Stocks'] = Stocks; // Browser
 }
